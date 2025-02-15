@@ -1,0 +1,46 @@
+require:
+  - rubocop-performance
+  - rubocop-rake
+  - rubocop-rspec
+
+AllCops:
+  TargetRubyVersion: 3.4
+  DisplayCopNames: true
+  NewCops: enable
+
+# ----------------------- Gemspec -----------------------
+
+Gemspec/DevelopmentDependencies:
+  Enabled: false
+
+# ----------------------- Style -----------------------
+
+Style/StringLiterals:
+  Enabled: true
+  EnforcedStyle: single_quotes
+
+Style/StringLiteralsInInterpolation:
+  Enabled: true
+  EnforcedStyle: double_quotes
+
+# ----------------------- Layout ----------------------
+
+Layout/LineLength:
+  Max: 120
+  Exclude:
+    - inc.gemspec
+
+# ---------------------- Metrics ----------------------
+
+Metrics/BlockLength:
+  Exclude:
+    - '**/*_spec.rb'
+    - inc.gemspec
+
+Metrics/ParameterLists:
+  CountKeywordArgs: false
+
+# ----------------------- RSpec -----------------------
+
+RSpec/ExampleLength:
+  Enabled: false
