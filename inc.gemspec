@@ -30,6 +30,8 @@ Gem::Specification.new do |spec|
   spec.executables = spec.files.grep(%r{\Aexe/}) { |f| File.basename(f) }
   spec.require_paths = ['lib']
 
+  spec.add_dependency 'zeitwerk', '~> 2.7'
+
   spec.add_development_dependency 'bundler-audit', '~> 0.9'
   spec.add_development_dependency 'guard', '~> 2.19'
   spec.add_development_dependency 'guard-bundler', '~> 3.0'
